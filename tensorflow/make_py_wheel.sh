@@ -70,10 +70,7 @@ build() {
   make install
   cd ..
   
-  build_tf_wrapper "2.0.0"
-  build_tf_wrapper "1.15.0"  
-  build_tf_wrapper "1.14.0"
-  build_tf_wrapper "1.13.1"
+  build_tf_wrapper "2.1.0"
 
   # Builds Python manylinux wheel package.
   python setup.py bdist_wheel --universal --plat-name=manylinux1_x86_64
