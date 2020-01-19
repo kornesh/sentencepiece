@@ -35,7 +35,7 @@ build_tf_wrapper() {
   fi
 
   # Builds _sentencepiece_processor_ops.so
-  pip install tensorflow${pkg_name} --upgrade
+  pip3 install tensorflow${pkg_name} --upgrade
 
   TF_CFLAGS=( $(python3 -c 'import os; os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"; import tensorflow as tf; print(" ".join(tf.sysconfig.get_compile_flags()))') )
   TF_LFLAGS=( $(python3 -c 'import os; os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"; import tensorflow as tf; print(" ".join(tf.sysconfig.get_link_flags()))') )
